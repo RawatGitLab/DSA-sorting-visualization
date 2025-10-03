@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sorting Algorithm Visualizer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Sorting Algorithm Visualizer</h1>
+    <p class="subtitle">Learn how sorting works—step by step, visually.</p>
+  </header>
+
+  <section class="controls">
+    <div class="row">
+      <div class="control">
+        <label for="size">Array Size</label>
+        <input type="range" id="size" min="5" max="120" value="40">
+        <span id="sizeValue">40</span>
+      </div>
+      <div class="control">
+        <label for="speed">Speed (ms per step)</label>
+        <input type="range" id="speed" min="1" max="200" value="20">
+        <span id="speedValue">20</span>
+      </div>
+      <div class="control">
+        <button id="generate">Generate Array</button>
+      </div>
+    </div>
+
+    <div class="row algo-buttons">
+      <button data-algo="bubble">Bubble Sort</button>
+      <button data-algo="selection">Selection Sort</button>
+      <button data-algo="insertion">Insertion Sort</button>
+      <button data-algo="merge">Merge Sort</button>
+      <button data-algo="quick">Quick Sort</button>
+      <button id="stop" class="danger">Stop</button>
+    </div>
+  </section>
+
+  <main id="bar-container" aria-label="Array bars"></main>
+
+  <section class="info">
+    <div class="card">
+      <h3>Complexity</h3>
+      <p><strong>Time:</strong> <span id="time-complexity">–</span></p>
+      <p><strong>Space:</strong> <span id="space-complexity">–</span></p>
+    </div>
+    <div class="card legend">
+      <h3>Legend</h3>
+      <ul>
+        <li><span class="swatch compare"></span> Compare</li>
+        <li><span class="swatch swap"></span> Swap/Write</li>
+        <li><span class="swatch sorted"></span> Sorted/Placed</li>
+        <li><span class="swatch default"></span> Default</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>
+    <p>Built with HTML, CSS, and Vanilla JS. Created by Varun Rawat.</p>
+  </footer>
+
+  <script src="algorithms.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
